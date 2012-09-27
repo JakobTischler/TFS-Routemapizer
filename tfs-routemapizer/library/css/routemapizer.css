@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ROUTEMAPIZER - START - */
+.hfeed.routemap {
+  position: relative; }
+  .hfeed.routemap h1:after {
+    background-color: #fe1a00;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+    background: -moz-linear-gradient(center top, #fe1a00 5%, #ce0100 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+    border: 1px solid #d83526;
+    color: #f0f0f0;
+    content: "Beta";
+    display: inline-block;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    left: -0.5em;
+    line-height: 25px;
+    padding: 0 5px;
+    position: relative;
+    text-shadow: 1px 1px 0px #b23e35;
+    text-transform: uppercase;
+    top: -1em;
+    z-index: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+    -webkit-box-shadow: inset 0px 1px 5px 1px #de5c50, 0px 2px 2px #555;
+    -moz-box-shadow: inset 0px 1px 5px 1px #de5c50, 0px 2px 2px #555;
+    -ms-box-shadow: inset 0px 1px 5px 1px #de5c50, 0px 2px 2px #555;
+    box-shadow: inset 0px 1px 5px 1px #de5c50, 0px 2px 2px #555; }
+  .hfeed.routemap em {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    width: 45%; }
+    .hfeed.routemap em.info {
+      display: block; }
+    .hfeed.routemap em.serif {
+      font-size: 1.5em;
+      position: absolute;
+      right: 0;
+      top: -1em; }
+  .hfeed.routemap textarea {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #D6D6D6;
+    display: block;
+    font-family: Monaco,Courier New,monospace !important;
+    font-size: 12px;
+	outline:none;
+    padding: 0.5em 1em;
+	resize:vertical;
+    width: 100%; }
+    .hfeed.routemap textarea.error {
+      border-color: #C00 !important; }
+  .hfeed.routemap label.error {
+    color: #C00; }
+  .hfeed.routemap #submit_fp_routemap {
+    display: block;
+    margin-left: 0; }
+  .hfeed.routemap #waiting {
+    background: url(../images/ajax-loader-02.gif) no-repeat scroll 0 0 transparent;
+    padding-left: 20px; }
+  .hfeed.routemap #routemap_response {
+    margin-bottom: 1em; }
+    .hfeed.routemap #routemap_response.success {
+      color: #55af02; }
+    .hfeed.routemap #routemap_response.error {
+      color: #C00; }
+    .hfeed.routemap #routemap_response .airportsMissing {
+      color: #C00; }
+    .hfeed.routemap #routemap_response .gcm_url {
+      color: #353535; }
+  .hfeed.routemap #map_canvas {
+    display: none;
+    height: 500px;
+    width: 100%; }
+    .hfeed.routemap #map_canvas img {
+      max-width: 10000px;
+      /* fixes img srew up in google maps */ }
+    .hfeed.routemap #map_canvas #tfs_heading {
+      background-color: rgba(245, 245, 245, 0.5);
+      color: #555555;
+      font-family: Open Sans,sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      left: 100px;
+      padding: 0.1em 0.3em;
+      position: absolute;
+      top: 5px;
+      z-index: 500; }
+      .hfeed.routemap #map_canvas #tfs_heading span {
+        background-color: rgba(50, 50, 50, 0.55);
+        color: #F0F0F0;
+        cursor: pointer;
+        display: block;
+        font-size: 13px;
+        bottom: 0;
+        padding: 0 0.5em;
+        position: absolute;
+        top: 100%;
+        height: 1.5em;
+        z-index: 501; }
+      .hfeed.routemap #map_canvas #tfs_heading .fullscreen {
+        left: 0; }
+      .hfeed.routemap #map_canvas #tfs_heading .closefullscreen {
+        display: none;
+        right: 0;
+        text-align: right; }
+  .hfeed.routemap #routemap_img {
+    margin-bottom: 2em;
+    position: relative; }
+    .hfeed.routemap #routemap_img.hasImg img {
+      border: 1px solid #D6D6D6;
+      padding: 7px; }
+      .hfeed.routemap #routemap_img.hasImg img:hover {
+        border-color: #c81074; }
+    .hfeed.routemap #routemap_img figcaption {
+      background-color: rgba(249, 249, 249, 0.65);
+      bottom: 1.5em;
+      left: 8px;
+      padding: 0.5em 12px;
+      position: absolute; }
+  .hfeed.routemap #routes {
+    padding-right: 2em;
+    border-right: 1px dashed #353535; }
+  .hfeed.routemap #airports {
+    margin-left: 2em; }
+    .hfeed.routemap #airports ul {
+      -moz-column-count: 4;
+      -moz-column-width: 60px;
+      column-count: 4;
+      column-width: 60px; }
+  .hfeed.routemap .routesData {
+    float: left;
+    margin-top: 1em;
+    width: 46%; }
+    .hfeed.routemap .routesData h6 {
+      display: inline; }
+    .hfeed.routemap .routesData span.toggle {
+      background-color: #E6E6E6;
+      border: 1px solid #D6D6D6;
+      cursor: pointer;
+      margin: 0 0.5em;
+      padding: 0.4em 0.8em; }
+      .hfeed.routemap .routesData span.toggle:hover {
+        background-color: #D6D6D6;
+        border-color: #d5d5d5; }
+      .hfeed.routemap .routesData span.toggle:focus, .hfeed.routemap .routesData span.toggle:active {
+        border-color: #c81074;
+        color: #c81074; }
+    .hfeed.routemap .routesData ul {
+      display: none;
+      margin-top: 1em;
+      -moz-column-count: 3;
+      -moz-column-gap: 1em;
+      -moz-column-width: 80px;
+      column-count: 3;
+      column-gap: 1em;
+      column-width: 80px;
+      height: 250px; }
+      .hfeed.routemap .routesData ul li span.outside {
+        color: #c81074;
+        cursor: pointer; }
+        .hfeed.routemap .routesData ul li span.outside:hover {
+          text-decoration: underline; }
+      .hfeed.routemap .routesData ul li span.highlight {
+        font-weight: bold;
+        text-decoration: underline; }
+      .hfeed.routemap .routesData ul li span.lowlight {
+        opacity: 0.7; }
+
+
+  .hfeed.routemap .infowindow h3 {
+    font-size: 1.2em; }
+  .hfeed.routemap .infowindow span {
+    display: block; }
+
+	.icaoLabel {
+		background-color:rgba(240,240,240,0.7);
+		font-family:'Open Sans';
+		font-weight:600;
+		padding:2px 4px;
+		text-align:center;
+		white-space:nowrap;
+		/*width:34px;*/
+		
+		-webkit-border-radius:2px;
+		   -moz-border-radius:2px;
+		    -ms-border-radius:2px;
+		     -o-border-radius:2px;
+		        border-radius:2px;
+	}
+
+/* INFO PAGES */
+#routemapizerNav {
+  margin-top: 0.4em; }
+  #routemapizerNav ul {
+    list-style: none;
+    margin: 0; }
+    #routemapizerNav ul li {
+      display: inline;
+      margin-right: 0.2em; }
+      #routemapizerNav ul li.current {
+        border-bottom: 3px solid #c81074;
+        font-size: 1.2em;
+        padding-bottom: 0; }
+
+#routemapizerChangelog {
+  margin-left: 0; }
+  #routemapizerChangelog .changelogDate {
+    list-style: none; }
+    #routemapizerChangelog .changelogDate h2 {
+      font-size: 1.2em;
+      text-decoration: underline; }
+  #routemapizerChangelog ul ul {
+    margin-bottom: 0; }
+	  #routemapizerChangelog code {
+      background-color: #E6E6E6;
+	  display:inline-block;
+      padding: 2px 4px 0; 
+	  }
+
+dl#faq {
+  clear: both;
+  font-size: 1.2em; }
+
+#questions {
+  border-right: 2px dashed #555;
+  float: left;
+  padding: 0 2em 0 0;
+  width: 40%; }
+  #questions dt {
+    font-weight: 600;
+    margin: 0 0.5em;
+    padding: 0.5em 3em 0.5em 0.5em;
+    width: 97.5%; }
+    #questions dt.active {
+      background: url(../images/faq_arrow.png) no-repeat right center scroll #353535;
+      position: relative; }
+      #questions dt.active a {
+        color: #F0F0F0; }
+        #questions dt.active a:hover {
+          cursor: default;
+          text-decoration: none; }
+
+#answers {
+  overflow: hidden;
+  padding: 0 0 0 2em;
+  width: auto; }
+  #answers dd {
+    display: none;
+    opacity: 0; }
+    #answers dd.target, #answers dd:target {
+      display: block;
+      opacity: 1; }
+    #answers dd code {
+      background-color: #E6E6E6;
+      padding: 2px 4px 0; }
+    #answers dd img.blockImg {
+      border: 1px solid #DDD;
+      margin: 1em auto;
+      max-width: 97.6%;
+      padding: 10px 11px; }
+      #answers dd img.inlineImg {
+        border: 0;
+        display: inline;
+        margin: 0;
+        max-width: auto;
+        padding: 0;
+        position: relative;
+        top: 7px; }
+
+/* ROUTEMAPIZER -  END  - */
